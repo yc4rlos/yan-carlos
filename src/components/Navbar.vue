@@ -4,9 +4,7 @@
     <nav>
         <div class="logo">
             <router-link active-class="active" to="/">
-                <span>
-                    YC
-                </span>
+                <img src="src/assets/images/logo.png">
             </router-link>
         </div>
 
@@ -54,12 +52,13 @@ export default {
 <style lang="scss">
 nav {
     position: fixed;
-    top: 10px;
+    top: 16px;
     width: 80%;
     margin: 0px 10%;
+    max-width: var(--max-width);
     z-index: 10;
     display: flex;
-    padding: 20px;
+    padding: 10px 20px;
     align-items: center;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -87,10 +86,22 @@ nav {
         font-size: 1rem;
         margin-left: 10px;
         color: black;
-        padding: 12px 20px;
         transition: var(--hover-transition);
         border: 2px solid transparent;
         border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        padding: 12px 20px;
+
+        &:has(img) {
+            padding: 0px;
+        }
+
+        img {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+        }
 
         &:hover {
             background-color: transparent;

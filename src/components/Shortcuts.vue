@@ -12,8 +12,8 @@
 .logos {
     position: fixed;
     bottom: 0px;
+    right: 20px;
     display: flex;
-    width: 100%;
     justify-content: flex-end;
 
     a {

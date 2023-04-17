@@ -21,23 +21,136 @@
     </div>
   </div>
   <div class="title">
-    {{ home.aboutTitle }}
+    {{ home.title }}
   </div>
-  <div class="about">
-    <div class="left">
-      Image
+  <div class="technologies">
+    <div class="angular">
+      <i class="devicon-angularjs-plain no-color"></i>
+      <i class="devicon-angularjs-plain colored"></i>
     </div>
-    <div class="right">
-      <div class="text">
-        {{ home.aboutText }}
-      </div>
+
+    <div class="vue">
+      <i class="devicon-vuejs-plain no-color"></i>
+      <i class="devicon-vuejs-plain colored"></i>
     </div>
+
+    <div class="javascript">
+      <i class="devicon-javascript-plain no-color"></i>
+      <i class="devicon-javascript-plain colored"></i>
+    </div>
+
+    <div class="typescript">
+      <i class="devicon-typescript-plain no-color"></i>
+      <i class="devicon-typescript-plain colored"></i>
+    </div>
+
+    <div class="go">
+      <i class="devicon-go-original-wordmark no-color"></i>
+      <i class="devicon-go-original-wordmark colored"></i>
+    </div>
+
+    <div class="C">
+      <i class="devicon-c-plain no-color"></i>
+      <i class="devicon-c-plain colored"></i>
+    </div>
+
+    <div class="node">
+      <i class="devicon-nodejs-plain no-color"></i>
+      <i class="devicon-nodejs-plain colored"></i>
+    </div>
+
+    <div class="bootstrap">
+      <i class="devicon-bootstrap-plain no-color"></i>
+      <i class="devicon-bootstrap-plain colored"></i>
+    </div>
+
+    <div class="html">
+      <i class="devicon-html5-plain no-color"></i>
+      <i class="devicon-html5-plain colored"></i>
+    </div>
+
+    <div class="css">
+      <i class="devicon-css3-plain no-color"></i>
+      <i class="devicon-css3-plain colored"></i>
+    </div>
+
+
+    <div class="scss">
+      <i class="devicon-sass-original no-color"></i>
+      <i class="devicon-sass-original colored"></i>
+    </div>
+
+    <div class="handlebars">
+      <i class="devicon-handlebars-plain no-color"></i>
+      <i class="devicon-handlebars-plain colored"></i>
+    </div>
+
+    <div class="express">
+      <i class="devicon-express-original no-color"></i>
+      <i class="devicon-express-original colored"></i>
+    </div>
+
+    <div class="nest">
+      <i class="devicon-nestjs-plain no-color"></i>
+      <i class="devicon-nestjs-plain colored"></i>
+    </div>
+
+    <div class="jasmine">
+      <i class="devicon-jasmine-plain no-color"></i>
+      <i class="devicon-jasmine-plain colored"></i>
+    </div>
+
+    <div class="jest">
+      <i class="devicon-jest-plain no-color"></i>
+      <i class="devicon-jest-plain colored"></i>
+    </div>
+
+    <div class="graphql">
+      <i class="devicon-graphql-plain no-color"></i>
+      <i class="devicon-graphql-plain colored"></i>
+    </div>
+
+    <div class="mongo">
+      <i class="devicon-mongodb-plain no-color"></i>
+      <i class="devicon-mongodb-plain colored"></i>
+    </div>
+
+    <div class="mysql">
+      <i class="devicon-mysql-plain no-color"></i>
+      <i class="devicon-mysql-plain colored"></i>
+    </div>
+
+    <div class="postgresql">
+      <i class="devicon-postgresql-plain no-color"></i>
+      <i class="devicon-postgresql-plain colored"></i>
+    </div>
+
+    <div class="npm">
+      <i class="devicon-npm-original-wordmark no-color"></i>
+      <i class="devicon-npm-original-wordmark colored"></i>
+    </div>
+
+    <div class="docker">
+      <i class="devicon-docker-plain no-color"></i>
+      <i class="devicon-docker-plain colored"></i>
+    </div>
+
+    <div class="linux">
+      <i class="devicon-linux-plain no-color"></i>
+      <i class="devicon-linux-plain colored"></i>
+    </div>
+
+    <div class="git">
+      <i class="devicon-git-plain no-color"></i>
+      <i class="devicon-git-plain colored"></i>
+    </div>
+
   </div>
 </template>
 
 <script lang="ts" script>
 import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue"
-import { home } from "./texts"
+import { home } from "./texts-home"
 export default {
   components: {
     LottieAnimation
@@ -65,7 +178,7 @@ export default {
   margin-top: 80px;
 }
 
-.about,
+.technologies,
 .header {
   background-color: var(--background-dark);
   padding: 30px;
@@ -75,6 +188,11 @@ export default {
   flex-direction: row;
   align-items: center;
   width: 100%;
+  overflow: hidden;
+
+  div {
+    max-height: 400px;
+  }
 
   >div {
     display: flex;
@@ -127,23 +245,38 @@ export default {
   }
 }
 
-.about {
-  color: var(--white-soft);
+.technologies {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 10px;
 
-  .left {
-    display: flex;
-    justify-content: center;
+  >div {
+    &:hover {
+      .no-color {
+        display: none;
+      }
+
+      .colored {
+        display: block;
+      }
+    }
+
+    i {
+      font-size: 60px;
+
+      &.colored {
+        transition: display 1s ease-in;
+        display: none;
+      }
+    }
   }
 
-  .right {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    transition: var(--hover-transition);
+  @media(max-width:970px) {
+    grid-template-columns: repeat(8, 1fr);
+  }
 
-    &:hover {
-      color: var(--focus-color);
-    }
+  @media(max-width: 720px) {
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 </style>
