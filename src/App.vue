@@ -7,7 +7,11 @@ import Shortcuts from './components/Shortcuts.vue'
   <main>
     <Navbar />
     <div class="content">
-      <router-view />
+      <Transition name="fade" mode="default">
+        <router-view>
+
+        </router-view>
+      </Transition>
     </div>
   </main>
   <Shortcuts />
@@ -27,5 +31,15 @@ main {
 
 .content {
   max-width: var(--max-width);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

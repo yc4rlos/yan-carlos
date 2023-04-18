@@ -11,7 +11,7 @@
         {{ texts.english.home.job }}
       </span>
       <div class="buttons-get">
-        <button @click="changeCollapse">Talk with me</button>
+        <button @click="collapseActive = !collapseActive">Talk with me</button>
         <button @click="downloadCv">GET CV</button>
       </div>
       <div class="collapse" :class="{ 'open': collapseActive }">
@@ -176,9 +176,6 @@ export default {
   methods: {
     downloadCv() {
       alert("Download CV...");
-    },
-    changeCollapse() {
-      this.collapseActive = !this.collapseActive;
     }
   },
 }
@@ -224,10 +221,11 @@ export default {
     align-items: flex-start;
     height: 0px;
     overflow: hidden;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
 
     a {
       color: white;
+      text-decoration: underline !important;
 
       &:hover {
         background-color: transparent;
@@ -248,9 +246,13 @@ export default {
     flex-direction: column;
     align-items: flex-end;
 
-    span:hover {
-      transition: var(--hover-transition);
-      color: var(--focus-color)
+    .saudation,
+    .job,
+    .name {
+      &:hover {
+        transition: var(--hover-transition);
+        color: var(--focus-color)
+      }
     }
 
     .saudation,
