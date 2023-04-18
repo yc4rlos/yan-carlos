@@ -1,6 +1,6 @@
 <template>
     <div class="projects">
-        <h4>{{ texts.english.projects.introduction }}</h4>
+        <h4>{{ texts.portuguese.projects.introduction }}</h4>
         <div class="maintenance">
             <lottie-animation path="animations/maintenance.json"></lottie-animation>
         </div>

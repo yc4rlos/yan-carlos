@@ -2,24 +2,24 @@
   <div class="header">
     <div class="left">
       <span class="saudation">
-        {{ texts.english.home.saudation }}
+        {{ texts.portuguese.home.saudation }}
       </span>
       <span class="name">
-        {{ texts.english.home.apresentation }} Yan Carlos
+        {{ texts.portuguese.home.apresentation }} Yan Carlos
       </span>
       <span class="job">
-        {{ texts.english.home.job }}
+        {{ texts.portuguese.home.job }}
       </span>
       <div class="buttons-get">
-        <button @click="collapseActive = !collapseActive">Talk with me</button>
-        <button @click="downloadCv">GET CV</button>
+        <button @click="collapseActive = !collapseActive">{{ texts.portuguese.home.contact }}</button>
+        <button @click="downloadCv">{{ texts.portuguese.home.cv }}</button>
       </div>
       <div class="collapse" :class="{ 'open': collapseActive }">
         <div>
-          <strong>{{ texts.english.home.phone }}:</strong><span>(11) 98562-6802</span>
+          <strong>{{ texts.portuguese.home.phone }}:</strong><span>(11) 98562-6802</span>
         </div>
         <div>
-          <strong>{{ texts.english.home.email }}:</strong><span>ycarlos.live@gmail.com</span>
+          <strong>{{ texts.portuguese.home.email }}:</strong><span>ycarlos.live@gmail.com</span>
         </div>
         <div>
           <strong>Linkedin:</strong><span>
@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="title">
-    {{ texts.english.home.title }}
+    {{ texts.portuguese.home.title }}
   </div>
   <div class="technologies">
     <div class="angular">
@@ -175,7 +175,7 @@ export default {
   },
   methods: {
     downloadCv() {
-      alert("Download CV...");
+      window.open("https://drive.google.com/file/d/1hiQJUIPvJz1Dw0xtFo833IZBYM5ixL7y/view?usp=sharing")
     }
   },
 }

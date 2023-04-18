@@ -8,10 +8,11 @@
         </div>
         <div class="right">
             <p>
-                {{ texts.english.about.text }}
+                {{ texts.portuguese.about.text }}
             </p>
-
-            <LottieAnimation path="animations/coffee.json" />
+            <div class="animation">
+                <LottieAnimation path="animations/coffee.json" />
+            </div>
         </div>
     </div>
 </template>
@@ -26,6 +27,10 @@ export default {
     },
     data() {
         return { texts }
+    },
+    methods: {
+        /** É brincadeira meu*/
+        brincadeirinha() { }
     }
 }
 </script>
@@ -66,11 +71,27 @@ export default {
         border-radius: 4px;
         padding: 30px;
         color: white;
+        position: relative;
+        white-space: pre-wrap;
+        padding-bottom: 28vw;
 
+        .animation {
+            position: absolute;
+            bottom: -50px;
+            z-index: 1;
+        }
     }
 
-    @media(max-width: 660px) {
+    @media(max-width: 720px) {
         flex-direction: column;
+
+        .right>p {
+            z-index: 2
+        }
+
+        .animation {
+            opacity: 0.3;
+        }
 
         .left,
         .right {

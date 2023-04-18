@@ -10,17 +10,17 @@
 
         <ul>
             <li>
-                <router-link active-class="active" to="/about">{{ texts.english.navbar.about }}</router-link>
+                <router-link active-class="active" to="/about">{{ texts.portuguese.navbar.about }}</router-link>
             </li>
             <li>
-                <router-link active-class="active" to="/projects">{{ texts.english.navbar.projects }}</router-link>
+                <router-link active-class="active" to="/projects">{{ texts.portuguese.navbar.projects }}</router-link>
             </li>
         </ul>
 
     <!-- <select @change="changeLanguage($event)">
             <option value="english">English</option>
-                                    <option value="portuguese">Portuguese</option>
-                                </select> -->
+                                        <option value="portuguese">Portuguese</option>
+                                    </select> -->
 
     </nav>
 </template>
