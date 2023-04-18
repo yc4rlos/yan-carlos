@@ -175,7 +175,7 @@ export default {
   },
   methods: {
     downloadCv() {
-      window.open("https://drive.google.com/file/d/1hiQJUIPvJz1Dw0xtFo833IZBYM5ixL7y/view?usp=sharing")
+      window.open("https://drive.google.com/file/d/14rvssmtvc1CQWMlZ6wozeiCJmXCD93Wy/view?usp=sharing")
     }
   },
 }
