@@ -4,37 +4,35 @@
     <nav>
         <div class="logo">
             <router-link active-class="active" to="/">
-                <img src="src/assets/images/logo.png">
+                <img src="/src/assets/images/logo.png">
             </router-link>
         </div>
 
         <ul>
             <li>
-                <router-link active-class="active" to="/about">{{ navbar[language].about }}</router-link>
+                <router-link active-class="active" to="/about">{{ texts.english.navbar.about }}</router-link>
             </li>
             <li>
-                <router-link active-class="active" to="/projects">{{ navbar[language].projects }}</router-link>
+                <router-link active-class="active" to="/projects">{{ texts.english.navbar.projects }}</router-link>
             </li>
         </ul>
 
-        <select @change="changeLanguage($event)">
+    <!-- <select @change="changeLanguage($event)">
             <option value="english">English</option>
-            <option value="portuguese">Portuguese</option>
-        </select>
+                                    <option value="portuguese">Portuguese</option>
+                                </select> -->
 
     </nav>
 </template>
 
 <script lang="ts">
 import type { RouterLink } from 'vue-router';
-import { navbar, ELanguages } from './texts';
-
-let language: ELanguages;
+import { texts } from '../content/texts';
 
 export default {
     data() {
         return {
-            navbar: navbar as any,
+            texts,
             language: 'english'
         };
     },

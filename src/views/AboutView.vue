@@ -3,12 +3,12 @@
 
         <div class="left">
             <div class="me-image">
-                <img src="src/assets/images/me.jpeg">
+                <img src="/src/assets/images/me.jpeg">
             </div>
         </div>
         <div class="right">
             <p>
-                {{ about.about }}
+                {{ texts.english.about.text }}
             </p>
 
             <LottieAnimation path="src/assets/animations/coffee.json" />
@@ -16,8 +16,8 @@
     </div>
 </template>
 
-<script lang="ts">
-import { about } from './texts-about';
+<script lang="js">
+import { texts } from '../content/texts';
 import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue"
 
 export default {
@@ -25,28 +25,30 @@ export default {
         LottieAnimation
     },
     data() {
-        return { about }
+        return { texts }
     }
 }
 </script>
 
 <style lang="scss">
 .about-me {
+    margin-top: 30px;
     display: flex;
     flex-shrink: 1;
-
 
     .left {
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: stretch;
+        align-items: center;
+        margin-bottom: 30px;
 
         .me-image {
             display: flex;
             height: fit-content;
             background-color: white;
-            padding: 16px;
+            padding: 10px;
             overflow: hidden;
             border-radius: 50%;
 
@@ -65,14 +67,15 @@ export default {
         padding: 30px;
         color: white;
 
-        p {
-            transition: var(--hover-transitio);
+    }
 
-            &:hover {
-                color: var(--focus-color);
-            }
+    @media(max-width: 660px) {
+        flex-direction: column;
+
+        .left,
+        .right {
+            width: 100%;
         }
-
     }
 }
 </style>

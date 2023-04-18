@@ -1,10 +1,10 @@
 <template>
     <div class="logos">
         <a href="https://github.com/yc4rlos" target="_blank">
-            <img src="src/assets/images/github-logo.png" alt="Github Logo">
+            <img src="/src/assets/images/github-logo.png" alt="Github Logo">
         </a>
         <a href="https://www.linkedin.com/in/yan-carlos-b95461216/" target="_blank">
-            <img src="src/assets/images/linkedin-logo.png" alt="Linkedin Logo">
+            <img src="/src/assets/images/linkedin-logo.png" alt="Linkedin Logo">
         </a>
     </div>
 </template>

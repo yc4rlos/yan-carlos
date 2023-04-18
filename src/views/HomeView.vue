@@ -2,17 +2,29 @@
   <div class="header">
     <div class="left">
       <span class="saudation">
-        {{ home.saudation }}
+        {{ texts.english.home.saudation }}
       </span>
       <span class="name">
-        {{ home.apresentation }} Yan Carlos
+        {{ texts.english.home.apresentation }} Yan Carlos
       </span>
       <span class="job">
-        {{ home.job }}
+        {{ texts.english.home.job }}
       </span>
       <div class="buttons-get">
-        <button @click="openLinkedin">Talk with me</button>
+        <button @click="changeCollapse">Talk with me</button>
         <button @click="downloadCv">GET CV</button>
+      </div>
+      <div class="collapse" :class="{ 'open': collapseActive }">
+        <div>
+          <strong>{{ texts.english.home.phone }}:</strong><span>(11) 98562-6802</span>
+        </div>
+        <div>
+          <strong>{{ texts.english.home.email }}:</strong><span>ycarlos.live@gmail.com</span>
+        </div>
+        <div>
+          <strong>Linkedin:</strong><span>
+            <a target="_blank" href="https://www.linkedin.com/in/yan-carlos-b95461216/">Link</a></span>
+        </div>
       </div>
     </div>
 
@@ -21,7 +33,7 @@
     </div>
   </div>
   <div class="title">
-    {{ home.title }}
+    {{ texts.english.home.title }}
   </div>
   <div class="technologies">
     <div class="angular">
@@ -148,24 +160,25 @@
   </div>
 </template>
 
-<script lang="ts" script>
+<script lang="js" script>
 import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue"
-import { home } from "./texts-home"
+import { texts } from "../content/texts"
 export default {
   components: {
     LottieAnimation
   },
   data() {
     return {
-      home
+      texts,
+      collapseActive: false
     }
   },
   methods: {
     downloadCv() {
       alert("Download CV...");
     },
-    openLinkedin() {
-      window.open("https://linkedin.com/in/yan-carlos-b95461216/");
+    changeCollapse() {
+      this.collapseActive = !this.collapseActive;
     }
   },
 }
@@ -202,6 +215,34 @@ export default {
 
 .header {
   margin-top: 30px;
+
+  .collapse {
+    width: 228px;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+
+    a {
+      color: white;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--focus-color);
+      }
+    }
+
+    strong {
+      margin-right: 8px;
+    }
+
+    &.open {
+      height: 80px;
+    }
+  }
 
   .left {
     flex-direction: column;
