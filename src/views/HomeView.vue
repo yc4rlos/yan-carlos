@@ -29,7 +29,7 @@
     </div>
 
     <div class="right">
-      <lottie-animation path="src/assets/animations/fire.json" />
+      <lottie-animation path="animations/fire.json" />
     </div>
   </div>
   <div class="title">
@@ -160,7 +160,7 @@
   </div>
 </template>
 
-<script lang="js" script>
+<script lang="js">
 import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue"
 import { texts } from "../content/texts"
 export default {

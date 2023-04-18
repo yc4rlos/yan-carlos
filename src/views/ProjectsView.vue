@@ -2,7 +2,7 @@
     <div class="projects">
         <h4>{{ texts.english.projects.introduction }}</h4>
         <div class="maintenance">
-            <lottie-animation path="src/assets/animations/maintenance.json"></lottie-animation>
+            <lottie-animation path="animations/maintenance.json"></lottie-animation>
         </div>
     </div>
 </template>

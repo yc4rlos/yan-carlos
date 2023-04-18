@@ -11,7 +11,7 @@
                 {{ texts.english.about.text }}
             </p>
 
-            <LottieAnimation path="src/assets/animations/coffee.json" />
+            <LottieAnimation path="animations/coffee.json" />
         </div>
     </div>
 </template>
