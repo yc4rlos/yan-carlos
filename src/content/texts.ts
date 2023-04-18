@@ -11,7 +11,6 @@ export const texts = {
             projects: 'Projects'
         },
         home: {
-            phone: 'Phone',
             email: 'Email',
             saudation: "Hi!",
             apresentation: "I'm",
@@ -36,7 +35,6 @@ export const texts = {
             projects: 'Projetos',
         },
         home: {
-            phone: 'Telefone',
             email: 'E-mail',
             saudation: "Olá!",
             apresentation: "Eu sou",

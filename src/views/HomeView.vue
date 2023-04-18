@@ -16,9 +16,6 @@
       </div>
       <div class="collapse" :class="{ 'open': collapseActive }">
         <div>
-          <strong>{{ texts.portuguese.home.phone }}:</strong><span>(11) 98562-6802</span>
-        </div>
-        <div>
           <strong>{{ texts.portuguese.home.email }}:</strong><span>ycarlos.live@gmail.com</span>
         </div>
         <div>
