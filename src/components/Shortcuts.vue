@@ -6,6 +6,9 @@
         <a href="https://www.linkedin.com/in/yan-carlos-b95461216/" target="_blank">
             <img src="/src/assets/images/linkedin-logo.png" alt="Linkedin Logo">
         </a>
+        <a href="https://www.instagram.com/yc4rl0s_/" target="_blank">
+            <img src="/src/assets/images/instagram-logo.png" alt="Instagram Logo">
+        </a>
     </div>
 </template>
 <style scoped lang="scss">
