@@ -19,8 +19,8 @@
 
     <!-- <select @change="changeLanguage($event)">
             <option value="english">English</option>
-                                        <option value="portuguese">Portuguese</option>
-                                    </select> -->
+                                                <option value="portuguese">Portuguese</option>
+                                            </select> -->
 
     </nav>
 </template>
@@ -69,7 +69,8 @@ nav {
     }
 
     ul {
-        width: 50%;
+        padding: 0px;
+        //width: 50%;
         display: flex;
         justify-content: space-around;
 
@@ -112,5 +113,8 @@ nav {
         }
     }
 
+
 }
+
+@media(max-width: 420px) {}
 </style>

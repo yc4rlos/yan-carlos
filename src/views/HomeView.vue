@@ -10,7 +10,7 @@
       <span class="job">
         {{ texts.portuguese.home.job }}
       </span>
-      <div class="buttons-get">
+      <div class="buttons">
         <button @click="collapseActive = !collapseActive">{{ texts.portuguese.home.contact }}</button>
         <button @click="downloadCv">{{ texts.portuguese.home.cv }}</button>
       </div>
@@ -211,12 +211,13 @@ export default {
   margin-top: 30px;
 
   .collapse {
-    width: 228px;
+    width: 100%;
     padding-top: 15px;
+    padding-left: 8%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-end;
     height: 0px;
+    flex-wrap: wrap;
     overflow: hidden;
     transition: all 0.3s ease-in;
 
@@ -228,6 +229,10 @@ export default {
         background-color: transparent;
         color: var(--focus-color);
       }
+    }
+
+    div {
+      margin-right: 10px;
     }
 
     strong {
@@ -266,21 +271,26 @@ export default {
     justify-content: center;
   }
 
-  .buttons-get button {
-    margin-left: 20px;
-    margin-top: 20px;
-    border: 1px solid var(--white-soft);
-    border-radius: 4px;
-    padding: 12px 20px;
-    background-color: transparent;
-    cursor: pointer;
-    color: var(--white-soft);
-    transition: var(--hover-transition);
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    &:hover {
+    button {
+      margin-left: 20px;
+      margin-top: 20px;
+      border: 1px solid var(--white-soft);
+      border-radius: 4px;
+      padding: 12px 20px;
+      background-color: transparent;
+      cursor: pointer;
+      color: var(--white-soft);
+      transition: var(--hover-transition);
 
-      border: 1px solid var(--focus-color);
-      color: var(--focus-color);
+      &:hover {
+
+        border: 1px solid var(--focus-color);
+        color: var(--focus-color);
+      }
     }
   }
 }
@@ -291,6 +301,7 @@ export default {
   row-gap: 10px;
 
   >div {
+
     &:hover {
       .no-color {
         display: none;
@@ -311,12 +322,48 @@ export default {
     }
   }
 
-  @media(max-width:970px) {
+
+}
+
+@media(max-width:970px) {
+  .technologies {
     grid-template-columns: repeat(8, 1fr);
   }
+}
 
-  @media(max-width: 720px) {
+@media(max-width: 720px) {
+  .technologies {
     grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media(max-width: 420px) {
+  .header {
+    position: relative;
+    width: 100%;
+
+    .left {
+      width: 100%;
+      z-index: 1;
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        ;
+      }
+    }
+
+    .right {
+      top: 50%;
+      right: 20%;
+      position: absolute;
+      z-index: 0;
+      opacity: 0.5;
+    }
+  }
+
+  .technologies {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 </style>

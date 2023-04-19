@@ -35,7 +35,7 @@ export const texts = {
             projects: 'Projetos',
         },
         home: {
-            email: 'E-mail',
+            email: 'Email',
             saudation: "Olá!",
             apresentation: "Eu sou",
             job: "Fullstack Developer",
