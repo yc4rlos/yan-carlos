@@ -1,21 +1,32 @@
-<script setup lang="ts">
-import Navbar from './components/Navbar.vue'
-import Shortcuts from './components/Shortcuts.vue'
-</script>
-
 <template>
   <main>
-    <Navbar />
+    <navbar v-model:language="language" />
     <div class="content">
       <Transition name="fade" mode="out-in">
-        <router-view>
-
+        <router-view :language="language">
         </router-view>
       </Transition>
     </div>
   </main>
-  <Shortcuts />
+  <shortcuts />
 </template>
+
+<script lang="ts">
+import Navbar from './components/Navbar.vue';
+import Shortcuts from './components/Shortcuts.vue';
+export default {
+  components: {
+    Navbar,
+    Shortcuts
+  },
+  data() {
+    return {
+      language: 'english'
+    }
+  }
+}
+</script>
+
 
 <style>
 main {

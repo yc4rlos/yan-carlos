@@ -7,47 +7,45 @@
                 <img src="/src/assets/images/logo.png">
             </router-link>
         </div>
-
         <ul>
             <li>
-                <router-link active-class="active" to="/about">{{ texts.portuguese.navbar.about }}</router-link>
+                <router-link active-class="active" to="/about">{{ texts[language as LanguageType].navbar.about
+                }}</router-link>
             </li>
             <li>
-                <router-link active-class="active" to="/projects">{{ texts.portuguese.navbar.projects }}</router-link>
+                <router-link active-class="active" to="/projects">{{ texts[language as LanguageType].navbar.projects
+                }}</router-link>
             </li>
         </ul>
-
-    <!-- <select @change="changeLanguage($event)">
-            <option value="english">English</option>
-                                                    <option value="portuguese">Portuguese</option>
-                                                </select> -->
-
+        <div class="custom-select">
+            <select :value="language" @change="$emit('update:language', ($event.target as HTMLSelectElement).value)">
+                <option value="english" class="english">🇺🇸 English</option>
+                <option value="portuguese" class="portuguese">🇧🇷 Português</option>
+            </select>
+        </div>
     </nav>
 </template>
 
 <script lang="ts">
 import type { RouterLink } from 'vue-router';
 import { texts } from '../content/texts';
+import type { LanguageType } from '../content/language-type';
 
 export default {
+    props: ['language'],
     data() {
         return {
             texts,
-            language: 'english'
         };
     },
-    methods: {
-        changeLanguage(event: Event) {
-
-            const value = (event.target as HTMLSelectElement).value;
-
-            this.language = value;
-        }
-    }
 }
 </script>
 
 <style lang="scss">
+.portuguese {
+    background-image: url("/src/assets/images/brazil-flag.png");
+}
+
 nav {
     position: fixed;
     top: 16px;
@@ -109,6 +107,10 @@ nav {
         &.active {
             background-color: var(--focus-color);
             color: white;
+
+            img {
+                filter: invert(1)
+            }
         }
     }
 

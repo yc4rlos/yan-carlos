@@ -8,7 +8,7 @@
         </div>
         <div class="right">
             <p>
-                {{ texts.portuguese.about.text }}
+                {{ texts[language].about.text }}
             </p>
             <div class="animation">
                 <LottieAnimation path="animations/coffee.json" />
@@ -22,6 +22,7 @@ import { texts } from '../content/texts';
 import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue"
 
 export default {
+    props: ["language"],
     components: {
         LottieAnimation
     },

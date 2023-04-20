@@ -1,6 +1,6 @@
 <template>
     <div class="projects">
-        <h4>{{ texts.portuguese.projects.introduction }}</h4>
+        <h4>{{ texts[language].projects.introduction }}</h4>
         <div class="maintenance">
             <lottie-animation path="animations/maintenance.json"></lottie-animation>
         </div>
@@ -9,7 +9,9 @@
 <script lang="js">
 import LottieAnimation from "lottie-vuejs/src/LottieAnimation.vue"
 import { texts } from "../content/texts"
+
 export default {
+    props: ["language"],
     components: {
         LottieAnimation,
     },

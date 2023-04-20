@@ -1,9 +1,6 @@
-export enum ELanguages {
-    'portuguese',
-    'english'
-}
+import type { LanguageOptions } from "./language-options.interface";
 
-export const texts = {
+export const texts: LanguageOptions = {
     english: {
         navbar: {
             lang: 'Languages',
@@ -38,7 +35,7 @@ export const texts = {
             email: 'Email',
             saudation: "Olá!",
             apresentation: "Eu sou",
-            job: "Fullstack Developer",
+            job: "Desenvolvedor Fullstack",
             title: "Tecnologias",
             contact: "Fale comigo",
             cv: "Meu currículo"
