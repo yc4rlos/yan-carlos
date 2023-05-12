@@ -32,7 +32,7 @@ export default {
 main {
   display: flex;
   justify-content: center;
-  padding: 100px 10%;
+  padding: 100px 10% 20px 10%;
   min-height: 100vh;
   height: max-content;
   background-image: url('./assets/images/background-rock.jpg');

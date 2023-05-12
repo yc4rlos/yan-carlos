@@ -5,6 +5,7 @@ interface ILanguage {
         lang: string;
         about: string;
         projects: string;
+        languages: string[]
     },
     home: {
         email: string;

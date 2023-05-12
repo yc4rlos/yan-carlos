@@ -1,5 +1,3 @@
-
-
 <template>
     <nav>
         <div class="logo">
@@ -17,11 +15,12 @@
                 }}</router-link>
             </li>
         </ul>
-        <div class="custom-select">
+        <div class="select">
             <select :value="language" @change="$emit('update:language', ($event.target as HTMLSelectElement).value)">
-                <option value="english" class="english">🇺🇸 English</option>
-                <option value="portuguese" class="portuguese">🇧🇷 Português</option>
+                <option value="english">🇺🇸 {{ texts[language as LanguageType].navbar.languages[0] }}</option>
+                <option value="portuguese">🇧🇷 {{ texts[language as LanguageType].navbar.languages[1] }}</option>
             </select>
+            <span class="focus"></span>
         </div>
     </nav>
 </template>
@@ -114,8 +113,75 @@ nav {
         }
     }
 
+    .select {
+        width: 130px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        line-height: 1.1;
+        background-color: transparent;
+        display: grid;
+        grid-template-areas: "select";
+        align-items: center;
+        position: relative;
+
+        select {
+            appearance: none;
+            background-color: transparent;
+            border: none;
+            padding: 0 1rem;
+            margin: 0;
+            width: 100%;
+            height: 52px;
+            font-family: inherit;
+            font-size: inherit;
+            cursor: inherit;
+            line-height: inherit;
+            outline: none;
+
+            &::-ms-expand {
+                display: none;
+            }
+
+            option {
+                color: black;
+                background-color: lightcoral;
+                padding: 0.5rem;
+
+                &:hover {
+                    background-color: white;
+                }
+            }
+
+            &:focus+.focus {
+                position: absolute;
+                top: -1px;
+                left: -1px;
+                right: -1px;
+                bottom: -1px;
+                border: 2px solid red;
+                border-radius: inherit;
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 0.8em;
+            height: 0.5em;
+            border-radius: 0px;
+            background-color: lightcoral;
+            clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+            margin-right: 1rem;
+        }
+    }
+
+    select,
+    .select:after {
+        grid-area: select;
+        justify-self: end;
+    }
+
 
 }
-
-@media(max-width: 420px) {}
 </style>

@@ -17,12 +17,7 @@ const router = createRouter({
     {
       path: '/projects',
       component: ProjectsView
-    },
-    {
-      path: '/**',
-      redirect: '/'
     }
-
   ]
 })
 
