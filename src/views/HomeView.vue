@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     downloadCv() {
-      window.open("https://drive.google.com/file/d/14rvssmtvc1CQWMlZ6wozeiCJmXCD93Wy/view?usp=sharing")
+      window.open("https://drive.google.com/file/d/1WWd9elPgqNg57o57nVVmvzfA-0Z_eVz_/view?usp=sharing")
     }
   },
 }
