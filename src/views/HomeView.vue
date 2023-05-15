@@ -56,11 +56,7 @@ export default {
   },
   methods: {
     downloadCv() {
-      if (this.language == "english") {
-        alert("Not avaible yet");
-      } else {
-        window.open("https://drive.google.com/file/d/14rvssmtvc1CQWMlZ6wozeiCJmXCD93Wy/view?usp=sharing")
-      }
+      window.open("https://drive.google.com/file/d/14rvssmtvc1CQWMlZ6wozeiCJmXCD93Wy/view?usp=sharing")
     }
   },
 }
