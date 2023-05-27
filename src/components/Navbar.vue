@@ -49,7 +49,6 @@ nav {
     position: fixed;
     top: 16px;
     width: 80%;
-    margin: 0px 10%;
     max-width: var(--max-width);
     z-index: 10;
     display: flex;
@@ -69,7 +68,6 @@ nav {
         padding: 0px;
         display: flex;
         justify-content: space-around;
-
     }
 
     li {
@@ -182,6 +180,13 @@ nav {
         justify-self: end;
     }
 
+    @media(max-width:420px) {
+        padding: 5px 2px;
+
+        .select {
+            width: 30px;
+        }
+    }
 
 }
 </style>

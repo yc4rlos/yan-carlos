@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss">
 .about-me {
-    margin-top: 30px;
+    padding-top: 30px;
     display: flex;
     flex-shrink: 1;
 
@@ -48,7 +48,7 @@ export default {
         justify-content: center;
         align-items: stretch;
         align-items: center;
-        margin-bottom: 30px;
+        padding-bottom: 30px;
 
         .me-image {
             display: flex;
@@ -75,6 +75,7 @@ export default {
         position: relative;
         white-space: pre-wrap;
         padding-bottom: 28vw;
+        overflow: hidden;
 
         .animation {
             position: absolute;
@@ -87,16 +88,25 @@ export default {
         flex-direction: column;
 
         .right>p {
-            z-index: 2
+            z-index: 2;
         }
 
         .animation {
+            z-index: 0;
             opacity: 0.3;
         }
 
         .left,
         .right {
             width: 100%;
+        }
+    }
+
+    @media(max-width:420px) {
+        padding-top: 5px;
+
+        .left {
+            padding-bottom: 10px;
         }
     }
 }

@@ -187,12 +187,16 @@ export default {
     .left {
       width: 100%;
       z-index: 1;
+      align-items: center;
 
       .buttons {
         display: flex;
         justify-content: space-between;
-        ;
       }
+    }
+
+    .collapse {
+      justify-content: flex-start;
     }
 
     .right {
