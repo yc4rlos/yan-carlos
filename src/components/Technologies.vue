@@ -1,13 +1,9 @@
 <template>
     <div class="technologies-list">
-        <div class="angular">
-            <i class="devicon-angularjs-plain no-color"></i>
-            <i class="devicon-angularjs-plain colored"></i>
-        </div>
 
-        <div class="vue">
-            <i class="devicon-vuejs-plain no-color"></i>
-            <i class="devicon-vuejs-plain colored"></i>
+        <div class="C#">
+            <i class="devicon-csharp-plain no-color"></i>
+            <i class="devicon-csharp-plain colored"></i>
         </div>
 
         <div class="javascript">
@@ -25,14 +21,29 @@
             <i class="devicon-go-original-wordmark colored"></i>
         </div>
 
-        <div class="C">
-            <i class="devicon-c-plain no-color"></i>
-            <i class="devicon-c-plain colored"></i>
-        </div>
-
         <div class="node">
             <i class="devicon-nodejs-plain no-color"></i>
             <i class="devicon-nodejs-plain colored"></i>
+        </div>
+
+        <div class="nest">
+            <i class="devicon-dotnetcore-plain no-color"></i>
+            <i class="devicon-dotnetcore-plain colored"></i>
+        </div>
+
+        <div class="nest">
+            <i class="devicon-nestjs-plain no-color"></i>
+            <i class="devicon-nestjs-plain colored"></i>
+        </div>
+
+        <div class="express">
+            <i class="devicon-express-original no-color"></i>
+            <i class="devicon-express-original colored"></i>
+        </div>
+
+        <div class="angular">
+            <i class="devicon-angularjs-plain no-color"></i>
+            <i class="devicon-angularjs-plain colored"></i>
         </div>
 
         <div class="bootstrap">
@@ -50,7 +61,6 @@
             <i class="devicon-css3-plain colored"></i>
         </div>
 
-
         <div class="scss">
             <i class="devicon-sass-original no-color"></i>
             <i class="devicon-sass-original colored"></i>
@@ -59,22 +69,7 @@
         <div class="handlebars">
             <i class="devicon-handlebars-plain no-color"></i>
             <i class="devicon-handlebars-plain colored"></i>
-        </div>
-
-        <div class="express">
-            <i class="devicon-express-original no-color"></i>
-            <i class="devicon-express-original colored"></i>
-        </div>
-
-        <div class="nest">
-            <i class="devicon-nestjs-plain no-color"></i>
-            <i class="devicon-nestjs-plain colored"></i>
-        </div>
-
-        <div class="jasmine">
-            <i class="devicon-jasmine-plain no-color"></i>
-            <i class="devicon-jasmine-plain colored"></i>
-        </div>
+        </div>        
 
         <div class="jest">
             <i class="devicon-jest-plain no-color"></i>
@@ -96,19 +91,24 @@
             <i class="devicon-mysql-plain colored"></i>
         </div>
 
+        <div class="sqlserver">
+            <i class="devicon-microsoftsqlserver-plain no-color"></i>
+            <i class="devicon-microsoftsqlserver-plain colored"></i>
+        </div>
+
         <div class="postgresql">
             <i class="devicon-postgresql-plain no-color"></i>
             <i class="devicon-postgresql-plain colored"></i>
         </div>
 
-        <div class="npm">
-            <i class="devicon-npm-original-wordmark no-color"></i>
-            <i class="devicon-npm-original-wordmark colored"></i>
-        </div>
-
         <div class="docker">
             <i class="devicon-docker-plain no-color"></i>
             <i class="devicon-docker-plain colored"></i>
+        </div>
+
+        <div class="azure">
+            <i class="devicon-azure-plain no-color"></i>
+            <i class="devicon-azure-plain colored"></i>
         </div>
 
         <div class="linux">
